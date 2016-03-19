@@ -6,20 +6,20 @@
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://v4.pingendo.com/assets/bootstrap/themes/purple.css" rel="stylesheet" type="text/css">
-
+  <link href="theme.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="controller.js"></script>
 </head>
 
-<body>
-  <div class="p-y-lg section">
+<body ng-app="timeoutApp" ng-controller="mainController">
+  <div class="p-y-3 p-y-lg section">
     <div class="background-video-holder">
-      <video class="background-video" src="/Users/gseregni/Downloads/Night-Traffic/MP4/Night-Traffic.mp4" autoplay="autoplay" loop="loop"></video>
+      <video class="background-video" src="https://player.vimeo.com/external/147029449.sd.mp4?s=cbacb10d55a36d9846fb6e245e0cf58c22483532" autoplay="autoplay" loop="loop"></video>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center">
-          <img class="center-block img-fluid" src="/Users/gseregni/Desktop/logotimeout.png">
-          <p class="lead pi-draggable pi-item text-inverse">Quando i musicisti diventano imprenditori</p>
+        <div class="col-md-6 text-center col-lg-offset-3">
+          <img class="center-block img-fluid m-y-2" src="logotimeout.png">
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-primary p-y-lg section">
+  <div class="bg-primary p-y-3 p-y-lg section">
     <div class="container">
       <div class="row text-center">
         <div class="col-xs-4">
@@ -67,234 +67,18 @@
     </div>
   </div>
   <div class="bg-faded p-y-lg section">
-    <div class="container-fluid p-x-lg">
+    <div class="container p-x-lg">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="display-3 m-y-md text-center">La nostra scuderia</h1>
+          <h1 class="display-3 m-y-3 m-y-md text-center text-xs-center">La nostra scuderia</h1>
         </div>
       </div>
       <div class="m-y-md row">
-        <div class="col-md-3">
+        <div class="col-md-3" ng-repeat="card in cards">
           <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
+            <img class="card-img-top img-fluid" src="{{getCover(card)}}" alt="Card image cap">
             <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-1.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Romeo Velluto</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw text-muted fa-user"></i></a>
-                  <p class="m-y-md">Chitarrista</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw text-muted fa-lightbulb-o"></i></a>
-                  <p class="m-y-md">Jazz</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="m-y-md row">
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-              <a class="btn btn-block btn-link" data-toggle="modal" data-target="#modal">Piu informazioni</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-1.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Romeo Velluto</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw text-muted fa-user"></i></a>
-                  <p class="m-y-md">Chitarrista</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw text-muted fa-lightbulb-o"></i></a>
-                  <p class="m-y-md">Jazz</p>
-                </div>
-              </div>
-              <a class="btn btn-block btn-link" data-toggle="modal" data-target="#modal">Piu informazioni</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="m-y-md row">
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-              <a class="btn btn-block btn-link" data-toggle="modal" data-target="#modal">Piu informazioni</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-1.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Romeo Velluto</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw text-muted fa-user"></i></a>
-                  <p class="m-y-md">Chitarrista</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw text-muted fa-lightbulb-o"></i></a>
-                  <p class="m-y-md">Jazz</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-group text-muted"></i></a>
-                  <p class="m-y-md">Gruppo</p>
-                </div>
-                <div class="col-md-5 ">
-                  <a class="m-y-md"><i class="fa fa-2x fa-fw fa-glass text-muted"></i></a>
-                  <p class="m-y-md">Swing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
-          <div class="card text-center">
-            <img class="card-img-top img-fluid" src="http://v4.pingendo.com/assets/photos/fashion/photo-3.jpg" alt="Card image cap">
-            <div class="card-block">
-              <h4>Ever in jazz band</h4>
+              <h4>{{card.name}}</h4>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <div class="row">
                 <div class="col-lg-6">
@@ -359,6 +143,8 @@
       </div>
     </div>
   </div>
+
+
 
 
 </body>
