@@ -80,3 +80,13 @@ $headings-font-family:       inherit !default;
 
 @import 'bootstrap';
 @import 'pingendo-bootstrap';
+
+.card {
+  h5 {
+    min-height: 50px;
+  }
+  img {
+	  height: 250px;
+  	object-fit: cover;
+	}
+}

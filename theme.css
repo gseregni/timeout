@@ -4876,3 +4876,10 @@ a.text-danger:hover {
   .section-fill-height .container {
     width: 72.25rem;
     max-width: 72.25rem; } }
+
+.card h5 {
+  min-height: 50px; }
+
+.card img {
+  height: 250px;
+  object-fit: cover; }
